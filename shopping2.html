@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="newcss.css"/>
+        <link rel="icon" type="image/png" href="image/hj.png">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="../lib/w3.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> 
+
+   
+        <title> Web site </title>
+    </head>
+    <body>
+        
+        <div class="bg-div">
+
+                    <img class="logo-img" src="image/hj.png" alt="logo" style="height:120px; width:200px">
+            <nav>
+               
+              <ul class="w3-navbar w3-card-2">
+                <div class="w3-bar">
+                <li><a href="#" class="w3-bar-item w3-button w3-padding-24 ">Home</a></li> 
+                
+                <li><a href="#" class="w3-bar-item w3-button w3-padding-24">Men</a></li>
+
+                <li><a href="#" class="w3-bar-item w3-button w3-padding-24 ">Women</a></li>
+
+                <div class="dropdown"
+                <li><a href="#" class="w3-bar-item w3-button w3-padding-24 dropbtn" >Kids</a></li>
+              <div class="dropdown-content">
+                     <a href="#">Link 1</a>
+                     <a href="#">Link 2</a>
+                     <a href="#">Link 3</a>
+
+             </ul>
+         </nav>
+     </div>
+ </div>
+         
+
+        
+  
+</div>
+
+     </div>
+        </div>
+
+<form id="search-in">
+
+                <input type="text" placeholder="Search..." class="search-web" >
+                <input type="button" value="Search" class="button-search">
+</form>      
+<form  class="scrollable" >
+    <h3><center><u>Filters</u></center></h3>
+        <h4> Price: </h4>
+<input data-filter="1" type="checkbox">Below 500<br>
+<input data-filter="2" type="checkbox">Above 500<br>
+
+ <h4> Brand: </h4>
+<input data-filter="1" type="checkbox">Lee Cooper<br>
+<input data-filter="2" type="checkbox">Forever 21<br>
+<input data-filter="3" type="checkbox">Allen Solly<br>
+<input data-filter="2" type="checkbox">Adidas<br>
+<input data-filter="2" type="checkbox">Tommy Hilfiger<br>
+
+<h4> Size: </h4>
+<input data-filter="1" type="checkbox">Small<br>
+<input data-filter="2" type="checkbox">Medium<br>
+<input data-filter="1" type="checkbox">Large<br>
+<input data-filter="2" type="checkbox">XL<br>
+<input data-filter="1" type="checkbox">XXL<br>
+
+</form>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr>
+    <td align="right"><img src="image/f21.jpg"> </td>
+    <td>Forever 21 Top<br> Size:M <br> Price: Rs. 1150<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/as.jpg"></td>
+    <td>Allen Solly Shirt<br> Size:L<br> Price:Rs.1570<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/asg.jpg"></td>
+    <td>Allen Solly Top<br> Size:S<br> Price:Rs.670<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/adidasw.jpg"> </td>
+    <td>Adidas Ladies Denim Top <br> Size:S<br> Price:Rs.1170<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/adidas.jpg"></td>
+    <td> Adidas Shirt <br> Size:XL<br> Price:Rs.1750<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/lcm.jpg"></td>
+    <td>Lee Cooper Shirt <br> Size:M<br> Price:Rs.950<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/lcg.jpg"></td>
+    <td> Lee Cooper Ladies Shirt<br> Size:M<br> Price:Rs.489<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+  <tr>
+    <td align="right"><img src="image/th.jpg"></td>
+    <td> Tommy Hilfiger Ladies Top<br> Size:S<br> Price:Rs.1089<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+   <tr>
+    <td align="right"><img src="image/thm.jpg"></td>
+    <td> Tommy Hilfiger Shirt<br> Size:XL<br> Price:Rs.1599<br><button type="button" background-color:"blue">BUY</button></td>
+  </tr>
+
+</table>
+
+<script type="text/javascript">
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+    </body>
+</html>
+
